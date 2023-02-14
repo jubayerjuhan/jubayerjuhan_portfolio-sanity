@@ -25,8 +25,9 @@ export default {
     },
     {
       name: 'aboutMeTechnologies',
-      type: 'string',
+      type: 'array',
       title: 'About Me Technologies',
+      of: [{name: 'technology', type: 'reference', to: {type: 'technologies'}}],
     },
     {
       name: 'profilePicture',

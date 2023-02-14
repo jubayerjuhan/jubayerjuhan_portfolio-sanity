@@ -4,7 +4,7 @@ export default {
   type: 'document',
   fields: [
     {name: 'name', title: 'Name', type: 'string'},
-    {name: 'desctiption', title: 'Desctiption', type: 'string'},
+    {name: 'description', title: 'Description', type: 'string'},
     {name: 'githubLink', title: 'Github Link', type: 'string'},
     {name: 'liveLink', title: 'Live Link', type: 'string'},
     {
@@ -26,13 +26,21 @@ export default {
       type: 'array',
       of: [
         {
-          name: 'chef',
+          name: 'technology',
           type: 'reference',
           to: {
             type: 'technologies',
           },
         },
       ],
+    },
+    {
+      name: 'thumbnail',
+      title: 'Thumbnail',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
   ],
 }
